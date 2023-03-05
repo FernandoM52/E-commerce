@@ -1,11 +1,11 @@
-import styled from "styled-components"
-import Produtos from "./components/Produtos"
+import ListaProdutos from "./components/ListaProdutos"
 import Carrinho from "./components/Carrinho"
+import styled from "styled-components"
 import PRODUTOS from "./mock"
 export default function App() {
   return (
     <ContainerApp>
-      <Produtos />
+      <ListaProdutos />
       <Carrinho />
     </ContainerApp>
   );

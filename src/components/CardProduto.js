@@ -1,15 +1,15 @@
 import styled from "styled-components";
 
-export default function Produto() {
-    <ContainerListaProdutos>
-        <ItemProduto />
-    </ContainerListaProdutos>
+export default function CardProduto() {
+  return (
+    <ItemProduto>
+      <div>
+        CardProduto
+      </div>
+    </ItemProduto>
+  );
 }
 
-const ContainerListaProdutos = styled.div`
-  display: flex;
-  flex-wrap: wrap;
-`;
 const ItemProduto = styled.div`
   border: 1px solid black;
   width: 200px;
@@ -30,3 +30,4 @@ const ItemProduto = styled.div`
     margin: 10px 0;
   }
 `;
+
