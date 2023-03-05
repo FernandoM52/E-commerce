@@ -1,11 +1,15 @@
 import styled from "styled-components";
 
-export default function CardProduto() {
+export default function CardProduto({ produto, adicionarCarrinho }) {
+  const { nome, preco, imagem } = produto;
   return (
     <ItemProduto>
+      <img src={imagem} alt={nome} />
       <div>
-        CardProduto
+        <p>{nome}</p>
+        <p>{preco}</p>
       </div>
+      <button onClick={() => adicionarCarrinho(produto)}>Comprar</button>
     </ItemProduto>
   );
 }

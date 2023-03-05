@@ -1,11 +1,15 @@
 import styled from "styled-components";
 import CardCarrinho from "./CardCarrinho";
-export default function Carrinho() {
+export default function Carrinho({ carrinho, removerCarrinho }) {
   return (
     <ContainerCarrinho>
-      <CardCarrinho />
-      <CardCarrinho />
-      <CardCarrinho />
+      {carrinho.map((prod) => (
+        <CardCarrinho
+          key={prod.id}
+          produto={prod}
+          removerCarrinho={removerCarrinho}
+        />
+      ))}
     </ContainerCarrinho>
   );
 }

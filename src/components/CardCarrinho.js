@@ -1,10 +1,16 @@
 import styled from "styled-components";
-export default function CardCarrinho() {
-    return (
-        <ItemCarrinho>
-            CardCarrinho
-        </ItemCarrinho>
-    );
+export default function CardCarrinho({ produto, removerCarrinho }) {
+  const { nome, preco, imagem } = produto;
+  return (
+    <ItemCarrinho>
+      <img src={imagem} alt={nome} />
+      <div>
+        <strong>{nome}</strong>
+        <p>{preco}</p>
+      </div>
+      <button onClick={() => removerCarrinho(produto)}>X</button>
+    </ItemCarrinho>
+  );
 }
 
 const ItemCarrinho = styled.div`
@@ -28,5 +34,6 @@ const ItemCarrinho = styled.div`
 
   strong {
     margin-bottom: 5px;
+    font-weight: bold;
   }
 `;

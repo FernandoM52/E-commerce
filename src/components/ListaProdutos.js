@@ -1,12 +1,17 @@
 import CardProduto from "./CardProduto";
 import styled from "styled-components";
 
-export default function ListaProdutos() {
+export default function ListaProdutos({ produtos, carrinho, adicionarCarrinho }) {
     return (
         <ContainerListaProdutos>
-            <CardProduto />
-            <CardProduto />
-            <CardProduto />
+            {produtos.map((prod) => (
+                <CardProduto
+                    key={prod.id}
+                    produto={prod}
+                    carrinho={carrinho}
+                    adicionarCarrinho={adicionarCarrinho}
+                />
+            ))}
         </ContainerListaProdutos>
     );
 }
